@@ -3803,6 +3803,14 @@
 
 	nomodule	Disable module load
 
+	nonroot_initramfs
+			[KNL] Create an additional tmpfs filesystem under rootfs
+			and unpack initramfs there instead of the rootfs itself.
+			This is useful for stateless systems, which run directly
+			from initramfs, create mount namespaces and use
+			"pivot_root" system call.
+
+
 	nopat		[X86] Disable PAT (page attribute table extension of
 			pagetables) support.
 
